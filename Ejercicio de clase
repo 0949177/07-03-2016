@@ -1,0 +1,9 @@
+###Emmanuel Gonzalez Escobar
+x1<-c(3.4,4.8,3.3,5.6,3.2,2.9,1.9,2.8,6.0,4.3,2.2)
+x3<-ts(x1,start = c(2005,1),freq=4)
+x2<-data.frame(x3)
+jpeg("GraficaEmmanuel.jpg")
+layout(1:2)
+plot(x2,xlab = "Años",ylab = "Tasa de Desocupacion",main="Tasa de Desocupacion")
+plot(aggregate(x3),xlab = "Años",ylab = "Tasa de Desocupacion",main="Tendencia")
+dev.off()
